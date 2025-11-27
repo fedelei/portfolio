@@ -1,57 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Portfolio</title>
+    <title>Portfolio - Federico Leiva</title>
 
-    <!-- https://boxicons.com/-->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-    <!--https://remixicon.com/-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-    <!-- https://fonts.google.com/ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&family=Roboto+Mono:wght@300;400;600&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <header>
         <a href="#" class="logo">Federico Leiva</a>
-
-        <!--Codigo para hacer que el boton sea clickeable sin usar Js.-->
-        <input type="checkbox" name="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon-action">
-            <div class='bx bx-menu' id="menu-icon"></div>
-        </label>
-
-
+        <div class='bx bx-menu' id="menu-icon"></div>
 
         <ul class="navlist">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre mi</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </header>
-    <!--HERO SECTION-->
-    <section class="hero">
+
+    <section class="hero" id="inicio">
         <div class="hero-text">
             <h5>Software Developer</h5>
             <h4>Java Developer</h4>
             <h1>Federico Leiva</h1>
-            <p> Fullstack Developer utilizando tecnologias como Java & ReactJs.
-                Me enfoco en la búsqueda de soluciones eficientes, seguras, y mantenibles,
-                aplicando codigo limpio y testing automatizado
+            <p>
+                Fullstack Developer utilizando tecnologías como Java & ReactJs.
+                Me enfoco en la búsqueda de soluciones eficientes, seguras y mantenibles,
+                aplicando código limpio y testing automatizado.
             </p>
-            <a href="#">CV</a>
-            <a href="#" class="icon-projects"><i class="ri-code-s-slash-fill"> </i>Proyectos</a>
+            <a href="#" class="btn">Descargar CV</a>
+            <a href="#portfolio" class="icon-projects"><i class="ri-code-s-slash-fill"></i> Proyectos</a>
         </div>
 
         <div class="hero-img">
@@ -59,15 +49,90 @@
         </div>
     </section>
 
-    <div class="icons">
-        <a href="#"><i class="ri-github-line"></i></a>
-        <a href="#"><i class="ri-linkedin-fill"></i></a>
-        <a href="#"><i class="ri-instagram-line"></i></a>
-    </div>
-    <div class="scroll-down">
-        <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
-    </div>
+    <section class="about" id="sobre-mi">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="about-content">
+            <p>
+                Soy un apasionado del desarrollo de software con foco en construir soluciones que combinen 
+                eficiencia, escalabilidad y buenas prácticas. Disfruto trabajar en entornos colaborativos, 
+                aprendiendo constantemente sobre nuevas tecnologías y metodologías ágiles.
+                <br><br>
+                Me motiva transformar ideas en productos funcionales, con una fuerte orientación al detalle 
+                y la calidad del código.
+            </p>
+        </div>
+    </section>
 
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+
+        <h3 class="subsection-title">Proyectos Backend</h3>
+        <div class="projects-container">
+            <div class="card">
+                <img src="/assets/imgs/backend1.png" alt="Proyecto Backend 1">
+                <h4>API REST de Gestión de Usuarios</h4>
+                <p>Proyecto en Java Spring Boot con autenticación JWT y CRUD completo.</p>
+                <a href="#" class="repo-link" target="_blank"><i class="ri-github-line"></i> Ver repositorio</a>
+                <a href="https://www.youtube.com" class="demo-link" target="_blank"><i class="ri-play-circle-line"></i> Ver Demo</a>
+            </div>
+
+            <div class="card">
+                <img src="/assets/imgs/backend2.png" alt="Proyecto Backend 2">
+                <h4>Servicio de Pagos con Node.js</h4>
+                <p>Integración con Mercado Pago y base de datos MongoDB.</p>
+                <a href="#" class="repo-link" target="_blank"><i class="ri-github-line"></i> Ver repositorio</a>
+                <a href="https://www.youtube.com" class="demo-link" target="_blank"><i class="ri-play-circle-line"></i> Ver Demo</a>
+            </div>
+
+            <div class="card">
+                <img src="/assets/imgs/backend3.png" alt="Proyecto Backend 3">
+                <h4>API de Reservas</h4>
+                <p>Microservicio REST con Express.js y conexión a PostgreSQL.</p>
+                <a href="#" class="repo-link" target="_blank"><i class="ri-github-line"></i> Ver repositorio</a>
+                <a href="https://www.youtube.com" class="demo-link" target="_blank"><i class="ri-play-circle-line"></i> Ver Demo</a>
+            </div>
+        </div>
+
+        <h3 class="subsection-title">Proyectos Frontend</h3>
+        <div class="projects-container">
+            <div class="card">
+                <img src="/assets/imgs/frontend1.png" alt="Proyecto Frontend 1">
+                <h4>Tienda Online Davanti Club</h4>
+                <p>Aplicación React moderna con integración a API y carrito de compras.</p>
+                <a href="#" class="repo-link" target="_blank"><i class="ri-github-line"></i> Ver repositorio</a>
+                <a href="https://www.youtube.com" class="demo-link" target="_blank"><i class="ri-play-circle-line"></i> Ver Demo</a>
+            </div>
+
+            <div class="card">
+                <img src="/assets/imgs/frontend2.png" alt="Proyecto Frontend 2">
+                <h4>Clima App</h4>
+                <p>Aplicación responsive que muestra datos del clima en tiempo real.</p>
+                <a href="#" class="repo-link" target="_blank"><i class="ri-github-line"></i> Ver repositorio</a>
+                <a href="https://www.youtube.com" class="demo-link" target="_blank"><i class="ri-play-circle-line"></i> Ver Demo</a>
+            </div>
+
+            <div class="card">
+                <img src="/assets/imgs/frontend3.png" alt="Proyecto Frontend 3">
+                <h4>Portfolio Personal</h4>
+                <p>Sitio web estático desarrollado con HTML, CSS y JavaScript puro.</p>
+                <a href="#" class="repo-link" target="_blank"><i class="ri-github-line"></i> Ver repositorio</a>
+                <a href="https://www.youtube.com" class="demo-link" target="_blank"><i class="ri-play-circle-line"></i> Ver Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-info">
+            <a href="mailto:fedeleiva@gmail.com"><i class="ri-mail-line"></i> fedeleiva@gmail.com</a>
+            <a href="https://www.linkedin.com/in/fedelei" target="_blank"><i class="ri-linkedin-fill"></i> /fedelei</a>
+            <a href="https://github.com/fedelei" target="_blank"><i class="ri-github-line"></i> github.com/fedelei</a>
+        </div>
+        <p class="footer-text">© 2025 Federico Leiva. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
