@@ -17,3 +17,21 @@ scrollReveal.reveal('.hero-text', {delay: 200, origin: 'top'})
 scrollReveal.reveal('.hero-img', {delay: 400, origin: 'top'})
 scrollReveal.reveal('.icons', {delay: 500, origin: 'left'})
 scrollReveal.reveal('.scroll-down', {delay: 450, origin: 'right'})
+
+// Leer más funcionalidad para las cards
+const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+readMoreBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.closest('.card');
+        const extraContent = card.querySelector('.extra-content');
+        
+        extraContent.classList.toggle('show');
+        
+        if (extraContent.classList.contains('show')) {
+            btn.textContent = 'Ver menos...';
+        } else {
+            btn.textContent = 'Ver más...';
+        }
+    });
+});
